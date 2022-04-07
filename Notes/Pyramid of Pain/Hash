@@ -1,0 +1,19 @@
+# 1 => Hash
+  The hash value is a numeric value of a fixed length that uniquely identifies data. 
+  A hash value is the result of a hashing algorithm.
+  
+  MD5 (Message Digest)
+    -> designed by Ron Rivest in 1992 
+    -> 128-bit hash value
+    -> NOT considered cryptographically secure
+  SHA-1 (Secure Hash Algorithm 1)
+    -> was invented by United States National Security Agency in 1995. 
+    -> SHA-1 takes an input and produces a 160-bit hash value string as a 40 digit hexadecimal number.
+    -> banned in 2013, susceptible to brute-force attacks.
+  SHA-2 (Secure Hash Algorithm 2) 
+    -> designed by NIST and NSA in 2001 to replace SHA-1
+    -> most common is SHA-256 -> returns a hash value of 256-bits as a 64 digit hexadecimal number.
+    
+  A hash is not considered to be cryptographically secure if two files have the same hash value or digest.
+
+  Various online tools can be used to do hash lookups like VirusTotal and Metadefender Cloud - OPSWAT.
