@@ -1,0 +1,5 @@
+-> Meta Charset is what determines how text is transmitted and stored. This text data is usually converted to binary first and then there needs to be a kind of cipher that connects characters with their correct binary equivalents.
+
+-> ExifTool is a free and open source software program which is used to read, write and update metadata of various types of files such as PDF, Audio, Video and images.
+
+-> meta-data = a set of data that describes and gives information about other data.
