@@ -1,0 +1,2 @@
+Pwndbg is a Python module which is loaded directly into GDB, and provides a suite of utilities and crutches to hack around all /\
+of the cruft that is GDB and smooth out the rough edges
