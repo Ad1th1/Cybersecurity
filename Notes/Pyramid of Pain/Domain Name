@@ -2,4 +2,5 @@ Punycode attack is used by the attackers to redirect users to a malicious domain
 Punycode is a way of converting words that cannot be written in ASCII, into a Unicode ASCII encoding.
 
 Attackers usually hide the malicious domains under URL Shorteners. 
-A URL Shortener is a tool that creates a short and unique URL that will redirect to the specific website specified during the initial step\ of setting up the URL Shortener link.
+A URL Shortener is a tool that creates a short and unique URL that will redirect to the specific website specified during the initial step
+of setting up the URL Shortener link.
