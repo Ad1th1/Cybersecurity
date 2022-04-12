@@ -1,0 +1,16 @@
+In late March 2022, two remote command execution vulnerabilities in the Java Spring framework were made public. The first of these
+vulnerabilities affects a component of the framework called "Spring Cloud Functions". The second, arguably more serious vulnerability, 
+affects a component in  "Spring Core" —  the heart of the framework — thus significantly increasing the vulnerability's potential impact
+and earning it the name "Spring4Shell" (a play on Log4Shell, the name of a brutal vulnerability disclosed at the end of 2021).
+
+The vulnerability allows attackers to upload a "webshell" (a piece of code which accepts commands from the attacker that the webserver 
+is then tricked into executing) to the vulnerable server, achieving remote command execution.
+
+To understand Spring4Shell, it is important that we understand CVE-2010-1622. Spring MVC (Model-View-Controller) is part of the Spring 
+Framework which makes it easy to develop web applications following the MVC design pattern. One of the features of Spring MVC is that it 
+automatically instantiates and populates an object of a specified class when a request is made based on the parameters sent to the endpoint. In simple terms, this could be abused to overwrite important attributes of the parent class, resulting in remote code execution.
+
+Spring4Shell works along similar lines, bypassing the mitigations that were added to patch CVE-2010-1622. The majority of the exploits
+for the Spring4Shell vulnerability operate by forcing the application to write a malicious .jsp file (effectively plaintext Java which
+Tomcat can execute — much like a PHP webserver would execute files with a .php extension) to the webserver. This webshell can then be 
+executed to gain remote command execution over the target.
