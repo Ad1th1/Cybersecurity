@@ -1,3 +1,6 @@
+~ Ecosystem that works on big-data management
+~ 
+
 ~ Framework that can store and process vast amounts of data efficiently
 1) Storage Unit
     HDFS is a distributed file system that handles large data sets running on commodity hardware. It is used to scale a single 
@@ -11,6 +14,7 @@
       data input -> split -> mapper phase -> shuffle and sort -> reduce phase
       
  3) YARN 
+      processes job-requests and manages cluster-resources
       Resource manager(assigns resources), node manager(handle nodes and monitor resource usage), application master and containers ( hold a 
       collection of physical resources)
       
