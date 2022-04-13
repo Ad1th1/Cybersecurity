@@ -1,0 +1,5 @@
+-> It is a process to convert information to a shorter fixed value known as the key that is used to represent the original information. 
+-> The purpose of hashing is indexing and retrieving items from the database. The process is very fast.	
+-> The hash code or key can not be reversed to the original information by any means. It can only be mapped and the hash code is checked 
+if the hash code is the same the information is the same otherwise not. The original information can not be retrieved.
+-> It is more secure in comparison to encryption.
