@@ -1,0 +1,16 @@
+~ Framework that can store and process vast amounts of data efficiently
+1) Storage Unit
+    HDFS is a distributed file system that handles large data sets running on commodity hardware. It is used to scale a single 
+    Apache Hadoop cluster to hundreds (and even thousands) of nodes. HDFS is one of the major components of Apache Hadoop, the others
+    being MapReduce and YARN.
+    Replication method to ensure that data is never lost and is stored in small factors on other devices
+    fault tolerant
+ 2) Map reduce 
+      Processing data and saving time
+      done by a simple program
+      data input -> split -> mapper phase -> shuffle and sort -> reduce phase
+      
+ 3) YARN 
+      Resource manager(assigns resources), node manager(handle nodes and monitor resource usage), application master and containers ( hold a 
+      collection of physical resources)
+      
