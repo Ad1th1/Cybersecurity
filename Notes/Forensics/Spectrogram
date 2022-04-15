@@ -1,0 +1,7 @@
+Tool that helps one see sound - lol!
+X - axis = time
+Y - axis = pitch
+Volume = color ( black = no sound, white = loudest sound )
+Timbre = quality of sound => overtones ( less overtones -> dark timbre, many overtones -> bright timbre  )
+
+https://academo.org/demos/spectrum-analyzer/
