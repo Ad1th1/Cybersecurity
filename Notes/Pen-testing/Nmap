@@ -1,0 +1,27 @@
+The first stage in establishing a “map” of the landscape is something called port scanning. 
+
+When a computer runs a network service, it opens a networking construct called a “port” to receive the connection.  Ports are necessary for
+making multiple network requests or having multiple services available.
+
+This is done by establishing connections to the remote webservers using different ports on your local machine. Equally, if you want a server
+to be able to run more than one service, then you need some way to direct the traffic to the appropriate service. Once again, ports are the
+solution to this.
+
+Network connections are made between two ports – an open port listening on the server and a randomly selected port on your own computer. 
+
+Every computer has a total of 65535 available ports.
+1024 standard ports
+HTTP Webservice = port 80 
+HTTPS Webservice = port 443
+Windows NETBIOS = port 139 
+SMB = port 445 (Server Message Block = share files)
+  //wannacry ransomware attack = exploit on vulnerability in SMB version 1
+        ~ encrypted user data and asked for ransom in bitcoin
+        
+Nmap can be used to perform many different kinds of port scan – the most common of these will be introduced in upcoming tasks; however, the
+basic theory is this: nmap will connect to each port of the target in turn. Depending on how the port responds, it can be determined as 
+being open, closed, or filtered (usually by a firewall). Once we know which ports are open, we can then look at enumerating which services
+are running on each port – either manually, or more commonly using nmap.
+
+Nmap is an extremely powerful tool – made even more powerful by its scripting engine which can be used to scan for vulnerabilities,
+and in some cases even perform the exploit directly!
