@@ -15,3 +15,8 @@ Web-sites
 Pen-testing
 -> nmap
 -> gobuster
+
+Cryptography
+-> Vigneres = https://www.guballa.de/vigenere-solver
+-> Decoding = cyberchef
+-> RSA and Ceaser = dcode.fr
