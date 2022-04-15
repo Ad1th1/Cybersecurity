@@ -1,2 +1,41 @@
--> Vignere Cipher
-    ~ involves a keyword, a 2-D table and some basic knowledge of mapping
+https://www.boxentriq.com/code-breaking/cipher-identifier
+
+-> The Caesar cipher
+    ~ a shift cipher 
+    ~ oldest and most famous ciphers in history
+    ~ each letter is shifted a fixed number of steps in the alphabet
+    
+-> Monoalphabetic substitution cipher
+    ~ Each letter is substituted by another letter in the alphabet. 
+    ~ If it contains word boundaries (spaces and punctuation), it is called an Aristocrat.
+    ~ The more difficult variant, without word boundaries, is called a Patristocrat.
+
+-> Atbash Cipher 
+    ~ called mirror code
+    ~ believed to be the first cipher ever
+    ~ you simply reverse the alphabet, so A becomes Z, B becomes Y and so on.
+
+-> Vigenère cipher 
+    ~ an improvement of the Caesar cipher, by using a sequence of shifts instead of applying the same shift to every letter.
+    ~ variant of the Vigenère cipher, which uses numbers instead of letters to describe the sequence of shifts, is called a Gronsfeld cipher
+    ~ Gronsfeld ciphers can be solved as well through the Vigenère tool.
+
+-> Vigenère Autokey Cipher 
+    ~ a more secure variant of the ordinary Vigenère cipher
+    ~ encrypts the first letters in the same way as an ordinary Vigenère cipher, but after all letters in the key have been used it doesn't
+    repeat the sequence. Instead it begins using letters from the plaintext as key.
+
+-> Beaufort Cipher 
+    ~ similar to the Vigenère cipher, but uses a different "tabula recta"
+    ~ plaintext letter is subtracted from the key letter instead of adding them
+    ~ reciprocal (the encryption and decryption algorithms are the same).
+
+-> Base64
+    ~ used to encode anything into printable ASCII-characters
+    ~ consists of letters (about 50% uppercase and 50% lowercase), as well as numbers, and often equal-characters (=) at the end.
+
+Base64 Decoder Tool
+
+
+
+
