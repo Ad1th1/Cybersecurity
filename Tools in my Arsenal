@@ -23,3 +23,8 @@ Cryptography
 -> Morse Code = https://morsedecoder.com/
 -> Cryptogram Solver = https://www.quipqiup.com/
 -> Cipher Analyzer = https://www.boxentriq.com/code-breaking/cipher-identifier
+
+Python Libraries
+-> os
+-> cryptodome
+-> 
