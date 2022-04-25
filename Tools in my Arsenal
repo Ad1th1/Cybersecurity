@@ -2,12 +2,18 @@ Network Sniffing
 -> Wireshark
 
 Images
--> zsteg, file, cat, strings, grep, ihdr, hexedit(for png)
+-> file, cat, strings, grep, ihdr, hexedit(for png)
+-> zsteg
+-> binwalk
+-> exiftool
+-> steghide
+-> stegoveritas
 -> stegsolve
 -> https://futureboy.us/stegano/decinput.html
 
 Audio
 -> https://academo.org/demos/spectrum-analyzer/
+-> Sonic Visualizer
 
 Web-sites
 -> Burpsuite
@@ -27,4 +33,4 @@ Cryptography
 Python Libraries
 -> os
 -> cryptodome
--> 
+-> pwntools
