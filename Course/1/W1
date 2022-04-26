@@ -15,3 +15,22 @@ HCI = Human Computer Interaction
     Task = goal that a user sets out to accomplish in a system,
 
 Consider working memory of people
+George A Miller = we can hold 7 +/- 2 pieces of information
+
+Chunking
+-> Create passwords using chunking
+
+Mental Models
+-> while using software
+-> Mappind, visibility and feedback
+-> Constraints
+
+ -> labels = explain what's going on in the system
+ -> Affordances = help a user figure out what to do
+ -> Constraints = prevent users from doing the wrong thing
+ -> Mapping = between the controls and the actual functionality
+ -> Conventions = users have come to expect these from controls and system interaction 
+ 
+ If we put all these things together along with our understanding of users' experiences, both in general, outside in the world and with software. 
+ It can help us better understand what the user will expect when they come in to use the system. And how we can design it to be more usable. And,
+ eventually, for our concerns, more secure.
