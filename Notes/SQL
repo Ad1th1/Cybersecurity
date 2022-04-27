@@ -1,0 +1,30 @@
+https://www.youtube.com/watch?v=HXV3zeQKqGY&t=4554s
+
+Language used to interact with RDBMS(software application used to create and manage different database systems)
+
+MySQL = RDBMS
+Query = used to get info from a database
+database schema = all the different tables and relations that a database is gonna store
+
+database = collection of related info
+DBMS = special software that helps users to create and maintain a database
+  -> easy to manage a large amount of info
+  -> handles security
+  -> backups
+  -> importing/exporting data
+  -> concurrency
+  -> interacts with software applications
+  
+CRUD = Create,read/retrieve/update/delete = core 4 ops performed
+
+2 types of databases
+1. Relational = organizes data into one or more tables
+    -> each table has columns and rows
+    -> unique key per row
+  
+2. Non Relational = organizes data into anything but a traditional table
+    -> key-value stores
+    -> documents(JSON,XML,etc)
+    -> graphs
+    ->flexible tables
+    
