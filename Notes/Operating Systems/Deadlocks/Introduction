@@ -27,10 +27,10 @@ Multiple instances of a resource type -> Banker's algorithm
 Banker's algorithm
 -> algo for deadlock avoidance
 -> multiple instances
+-> Safety Algorithm and resource-allocation algorihtm
 
-
-!! Safety Algorithm
-
-!! Deadlock detection
+Deadlock detection
 -> detection algorithm
 -> recovery scheme
+
+-> in a system 
