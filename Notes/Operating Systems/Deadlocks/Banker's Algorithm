@@ -1,0 +1,65 @@
+Banker's algorithm
+-> algo for deadlock avoidance
+-> multiple instances
+
+-> n processes and m resource types
+-> available = 1D array of size m => indicates available resources/instance types
+-> max = 2D array of size nxm => specifies max demand of each process in a system
+-> allocation = 2D array of size nxm => specifies number of resources allocated to process
+-> need = 2D array of size nxm => remaining resources needed
+-> need = max - allocation
+
+-> 2 Sub algorithms
+    1. Safety Algorithm
+    2. Request-resource algorithm
+     
+Safety Algorithm:
+    work = vector of length m
+    finish = vector of length n
+    Step 1:
+    work = available  //number of available resources
+    finish[i] = false //i=0,1,2,3...
+    
+    Step 2:
+    find i such that
+    finish[i] = false
+    need[i] <= work[i]
+    if no such i, go to step 4
+    
+    Step 3:
+    work = work + allocation[i]
+    finish[i] = true
+    go to step 2  //continue for all processes
+    
+    Step 4:
+    if finish[i] = true for all i => Safe State
+    else if there is an i such that need[i] > work[i] => unsafe state
+
+Request-resource algorithm:
+    Step 1:
+    if request[i] <= need[i]
+    go to step 2
+    else -> error
+    
+    Step 2:
+    if request[i] <= available[i]
+    go to step 3
+    else -> P[i] must wait since resources are unavailable
+    
+    Step 3:
+    pretend to have allocated resources
+    available = available - request[i]
+    allocation[i] = allocation[i] + request[i]
+    need[i] = need[i] - request[i]
+    |
+    --> new state => check this stae using safety algorithm.
+    --> if safe, grant request, else don't
+    
+    
+    
+    
+    
+    
+  
+    
+    
