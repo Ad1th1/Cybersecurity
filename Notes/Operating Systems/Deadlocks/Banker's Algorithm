@@ -51,9 +51,9 @@ Request-resource algorithm:
     available = available - request[i]
     allocation[i] = allocation[i] + request[i]
     need[i] = need[i] - request[i]
-    |
-    --> new state => check this stae using safety algorithm.
-    --> if safe, grant request, else don't
+    
+        --> new state => check this state using safety algorithm.
+        --> if safe, grant request, else don't
     
     
     
