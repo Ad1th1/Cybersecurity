@@ -9,11 +9,30 @@
   2. Deadlock prevention => ensure that at-least one condition is not met
   3. Enter, detect and recover from a deadlock
   
-!! Deadlock Prevention = restrain the way requests are made
-1. Mutual Exclusion = can't deny this property
-2. Hold and Wait = request and be allocated all resources before execution
-3. No preemption = release all resources if it needs an unavailable resource
+Deadlock Prevention = restrain the way requests are made by altering one of the 4 deadlock conditions
+
+1. Mutual Exclusion = can't deny this property for non-shareable resources
+
+2. Hold and Wait
+    -> whenever a process requests a resource, it should not hold other resources
+        Protocol 1: request and be allocated all resources before execution
+        Protocol 2: request resources only when you have none, and release resources before requesting for additional resources
+    -> disadvantages = low resource utilizationa and possible starvation
+
+3. No preemption:
+    -> Protocol 1: release all resources if it needs an unavailable resource
+    -> Protocol 2: when resource is requested, check availability
+                      if available, allocate
+                      else preempt other process using this resource and allocate to the requesting process
+    -> applied to resources whose states are easily saved and reused
+    -> not generally applied to printers or tape drivers
+    
+    
 4. Circular Wait = ordering of resource types
+    -> each process requests resources in an increasing order of enumeration
+    -> give priorities based on numbering.
+    Eg: Process P1 is allocated resource R5. If P1 requests R3 and R4, which are numerically less than 5, it won't be granted.
+    
 
 !! Deadlock Avoidance
 
