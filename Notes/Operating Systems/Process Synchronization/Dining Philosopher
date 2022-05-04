@@ -1,0 +1,34 @@
+-> Classical synchronization problem
+-> philosopher's around table, either eat, using two forks or think.
+-> no 2 philosophers adjacent to each other can eat
+-> when thinking, doesn't interact with colleagues
+-> when eating, picks two adjacent forks, can pick one fork at a time
+-> cannot pick a fork in neighbour's hand
+-> when philosopher has both forks, releases them only after he has finished eating and starts thinking again
+
+
+-> each fork is a semaphore
+-> grabs a fork by executing wait operation on semaphore
+-> releases fork/chopstick by executing signal() operation on semaphores
+
+-> shared data = semaphore chopstick[5]  //an array
+-> all elements of chopsticks are initialized to 1
+
+-> deadlock issue = all philosophers get hungry at same time, pick left fork at some time = gets delayed forever
+Solutions for deadlock:
+-> allow at most 4 philosophers to sit simultaneously
+-> allow a philosopher to pick up a chopstick, onliy if both chopsticks are available(pick them up in the critical section)
+-> use assymetric solution: odd philosopher picks up right and left chopstick
+                            even philosopher picks up right and then the left chopstick
+Philosopher i:  //no 2 adjacent philosophers 
+do{
+
+wait(chopstick[i]);
+wait(chopstick[i+1]%5);
+...
+//eat
+
+signal(chopstick[i]);
+signal(chopstick[i+1]%5);
+//think
+}while(true)
