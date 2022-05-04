@@ -32,11 +32,24 @@ Deadlock Prevention = restrain the way requests are made by altering one of the 
     -> each process requests resources in an increasing order of enumeration
     -> give priorities based on numbering.
     Eg: Process P1 is allocated resource R5. If P1 requests R3 and R4, which are numerically less than 5, it won't be granted.
-    
+  
+  
+Resource Allocation graph
+-> used for single instance of a resource
+-> request and assignment edge
 
-!! Deadlock Avoidance
+**Deadlock Avoidance**
+-> used for single instance of a resource
+-> in addition to request and assignment edges, we have a claim-edge(dashed-line)
+-> when requesting, claim edge -> request edge
+-> when releasing, assignment edge -> clain edge
 
-!! Resource Allocation graph
+-> claim edges of resources should be in the resource allocation graph before beginning
+-> request is granted only if conversion of request to assignment edge does not lead to cycle formation(needs cycle detection algorithm)
+-> if cycle is found, unsafe state
+
+
+
 
 !! Safe, unsafe state
 
@@ -53,3 +66,35 @@ Deadlock detection
 -> recovery scheme
 
 -> in a system 
+
+
+**Recovery from deadlock**
+Possibility 1: inform operator and make them deal with it
+Possibility 2: make system recover
+
+How to break from deadlock:
+Option 1: abort one or more processes in circular-wait
+Option 2: preempt resources from one or more deadlocked processes
+
+Abort processes methods:
+Method 1: Abort all deadlocked processes
+          -> expensive
+Method 2: Abort one process at a time, until deadlock is eliminated
+          -> overhead -> takes time for deadlock detection algo after each abortion
+          
+Aborting a process may not be easy
+Eg: file updation, printing
+
+Partial Termination method:
+-> determine which process is to eliminated
+-> abort processes according to minimum cost
+
+Factors affecting abortion:
+1. process priority
+2. time process has taken and time it will need
+3. number and type of resources
+4. number of resources needed by process
+5. number of processes to be terminated 
+6. interactive or batch process
+
+
