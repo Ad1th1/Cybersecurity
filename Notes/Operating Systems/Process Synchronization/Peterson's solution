@@ -1,0 +1,40 @@
+-> classical software-based solution to critical-selection problem
+-> 3 requirements for critical-selection problem = mutual exclusion, progress and bounded waiting
+-> may not work on modern computers
+-> restricted to 2 processes
+
+-> humble algo, allows the other to enter the critical section
+-> int turn = variable to indicate whose turn it is, to enter the critical section
+-> boolean flag = variable to indicate whether a process is ready to enter the critical section
+
+for Pi
+do{
+
+flag[i] = true;
+turn = j;
+while(flag[j] && turn == [j])
+
+critical section
+
+flag[i] = flase;
+
+remainder section
+
+} while(true)
+
+-------------------------------------
+
+for Pj
+do{
+
+flag[j] = true;
+turn = i;
+while(flag[i] && turn == [i])
+
+critical section
+
+flag[j] = flase;
+
+remainder section
+
+} while(true)
