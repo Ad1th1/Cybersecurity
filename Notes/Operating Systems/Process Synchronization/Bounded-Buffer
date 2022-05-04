@@ -1,31 +1,36 @@
--> proposed by Dijkstra
--> technique to manage concurrent processes using a simple integer value
--> non-negative variable shared between threads
--> used to solve critical section problem and achieve process synchronization in multi-processing environment
--> semaphore, S 
--> two standard atomic operations -> wait() -> P and signal() -> V
 
-wait(): //to test if there is a process in the critical section
+  
+-> Classical synchronization problem
+-> Bounded buffer / Producer-consumer problem
+-> buffer on n slots and each slot is capable if storing one unit of data
+-> 2 processes = producer and consumer, operating on the buffer
+-> producer tries to insert data into an empty slot in the buffer
+-> consumer tries to remove data from a filled slot in the buffer
+-> producer must not insert data when buffer is full
+-> consumer must not remove data when buffer is empty
+-> producer and consumer must not insert and remove data simultaneously
 
-P(Semaphore S){ 
-while(S<=0);  //no operation
-S--;
-}
+-> 3 semaphores
+-> m(mutex) = a binary semaphore used to acquire and release locks
+-> empty, counting semaphore whose initial value is the number of slots in the buffer, since all slots are initially empty
+-> full,  counting semaphore whose initial value is 0
 
-signal():
-V(Semaphore S){
-S++;
-}
+Producer:
+do{
+wait(empty); //wait until empty > 0 and then decrement empty
+wait(mutex); //acquire lock
+/* add data to buffer */
+signal(mutex);
+signal(full); //increment full because we filled one slot
 
--> Only one process can modify the semaphore value at a time
+}while(TRUE)
 
-2 types of semaphores:
-1. Binary Semaphore: 
-    -> value ranging from 0 to 1
-    -> binary semaphores are known as mutex locks, locks that provide mutual exclusion
+Consumer:
+do{
+wait(full); //wait until full > 0 and then decrement full
+wait(mutex); //acquire lock
+/* remove data from buffer */
+signal(mutex);
+signal(empty); //increment full because we filled one slot
 
-2. Counting SEmaphore
-    -> used to control access to resources having multiple instances
-   
-### A mutual exclusion (mutex) is a program object that prevents simultaneous access to a shared resource. This concept is used in concurrent programming 
-with a critical section, a piece of code in which processes or threads access a shared resource.
+}while(TRUE)
