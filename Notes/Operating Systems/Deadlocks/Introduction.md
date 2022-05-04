@@ -76,7 +76,7 @@ How to break from deadlock:
 Option 1: abort one or more processes in circular-wait
 Option 2: preempt resources from one or more deadlocked processes
 
-Abort processes methods:
+**Abort processes methods:**
 Method 1: Abort all deadlocked processes
           -> expensive
 Method 2: Abort one process at a time, until deadlock is eliminated
@@ -97,4 +97,15 @@ Factors affecting abortion:
 5. number of processes to be terminated 
 6. interactive or batch process
 
+**Preempt processes**
+1. Select a victim
+2. Rollback
+3. Starvation
 
+Victim Selection:
+-> which resource and process is to be preempted
+-> determine preemption order and minimize cost
+
+Rollback:
+-> what should be done with the preempted resource
+-> 
