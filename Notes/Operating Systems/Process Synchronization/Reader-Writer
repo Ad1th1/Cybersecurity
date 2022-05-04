@@ -1,0 +1,40 @@
+-> Classical synchronization problem
+-> database to be shared among concurrent processes
+-> some processes may only want to read the database whereas others may want to update(read and write) the database
+-> former = reader and latter = writer
+-> if 2 readers access shared data simultaneously, it is fine
+-> if a writer and reader access data simultaneously, there is an issue
+-> Therefore, writers must have exclusive access to data
+
+2 semaphores and 1 integer variable
+1. mutex = semaphore(initialized to one) => used to ensure mutual exclusion when readcount is updated
+ie: when a reader enters or exits from the critical section
+2. wrt, semaphore, initialized to 1, common to both reader and writer processes
+3. readcount = integer variable, initialized to 0, to keep track of how many are currently reading the process
+
+Writer:
+do{
+//writer requests critical section
+wait(wrt);
+/* performs write */
+//leaves critical section
+signal(wrt);
+
+}while(true)
+
+Reader:
+do{
+  wait(mutex);
+  readcnt++;    // number of readers has increased by 1
+  if(readcnt==1)
+  wait(wrt);    // to ensure that no writer can enter if there is even one reader
+  signal(mutex);  //other readers can enter while current reader is inside the critical section
+
+/* current reader performs reading */
+   wait(mutex);
+   readcnt--;   //reader wants to leave
+   if(readcnt == 0)   //no reader in criical section
+    signal(wrt);  //writer can enter
+    signal(mutex);  //reader leaves
+
+}while(true);
