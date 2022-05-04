@@ -1,0 +1,17 @@
+-> abstract data type
+-> presents a set of programmer-defined operations that provide mutual exclusion within the monitor
+
+monitor monitor_name
+{
+//shared variables
+procedure P1:
+
+procedure P2:
+
+initialization code:
+}
+
+-> monitor procedures can access only local variables
+-> local variables can be accessed only by local procedure
+-> only one active processs at a time
+
