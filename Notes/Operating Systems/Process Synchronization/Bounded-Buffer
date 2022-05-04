@@ -1,0 +1,31 @@
+-> proposed by Dijkstra
+-> technique to manage concurrent processes using a simple integer value
+-> non-negative variable shared between threads
+-> used to solve critical section problem and achieve process synchronization in multi-processing environment
+-> semaphore, S 
+-> two standard atomic operations -> wait() -> P and signal() -> V
+
+wait(): //to test if there is a process in the critical section
+
+P(Semaphore S){ 
+while(S<=0);  //no operation
+S--;
+}
+
+signal():
+V(Semaphore S){
+S++;
+}
+
+-> Only one process can modify the semaphore value at a time
+
+2 types of semaphores:
+1. Binary Semaphore: 
+    -> value ranging from 0 to 1
+    -> binary semaphores are known as mutex locks, locks that provide mutual exclusion
+
+2. Counting SEmaphore
+    -> used to control access to resources having multiple instances
+   
+### A mutual exclusion (mutex) is a program object that prevents simultaneous access to a shared resource. This concept is used in concurrent programming 
+with a critical section, a piece of code in which processes or threads access a shared resource.
