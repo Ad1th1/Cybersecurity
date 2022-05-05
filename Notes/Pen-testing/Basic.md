@@ -16,3 +16,10 @@ by default.
 
 Nmap works with two protocols that use ports: TCP and UDP.
 }
+
+**Pen-Testing Procedure**
+Reconnaissance
+Enumeration and Scanning
+Exploitation
+Privilege Escalation
+Covering Tracks
