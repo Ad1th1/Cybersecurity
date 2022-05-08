@@ -1,1 +1,2 @@
--> ord = returns an integer representing the Unicode character.
+-> ord = returns an integer representing the Unicode character
+-> chr = returns a character (a string) from an integer
