@@ -1,0 +1,16 @@
+Command Line argument is a way of managing the script or program externally by providing the script name and the input 
+parameters from command line options while executing the script. 
+
+To use, sys.argv in a Python script, we need to import the sys module into the script.
+Elements of sys.argv is a Python list, all command-line arguments are passed into it in the correct order.
+
+sys = module
+
+sys.argv[0] is the name of the script. 
+
+When a python script is executed with arguments, it is captured by Python and stored in a list called sys.argv. 
+
+Here, sys.argv[0] is always the filename/script executed and sys.argv[1] is the first command line argument passed to 
+the script.
+
+Python provides a module named as getopt which helps to parse command line options and arguments.
