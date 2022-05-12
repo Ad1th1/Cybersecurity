@@ -1,9 +1,0 @@
-Source Code -> Intermediate Language Bytecode -> BInary Encoded instructions
-
-Logic gates
--> and,or,not, nor, nor,nand, xor
--> add up to give you a computer
-
--> memory, disk, network => hardware bridge => CPU(registers, control unit,ALU), caching
-
--> memory is faster than disk
