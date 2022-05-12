@@ -25,3 +25,6 @@ jz  ZF=1
 jnz ZF=0
 
 Flag registers
+
+Memory(stack):
+-> little endian
