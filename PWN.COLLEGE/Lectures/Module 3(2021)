@@ -1,0 +1,44 @@
+V1 
+
+assembly
+-> only true language, for a CPU
+
+rax -> eax -> ax
+-> Weird point:
+  accessing eax zeroes out the rest of rax
+  
+-> registers = 
+
+je  ZF=1
+jne ZF=0
+jg  ZF=0 and SF=CF
+jl  SF!=OF
+jle ZF=1 or SF!=CF
+jge SF=CF
+ja  CF=0 and ZF=0
+jb  CF=1
+jae CF=0
+jbe CF=1 or ZF=1
+js  SF=1
+jns SF=0
+jo  OF=1
+jno OF=0
+jz  ZF=1
+jnz ZF=0
+
+Flag registers
+
+Memory(stack):
+-> little endian
+
+--------------------------------------------
+
+Source Code -> Intermediate Language Bytecode -> BInary Encoded instructions
+
+Logic gates
+-> and,or,not, nor, nor,nand, xor
+-> add up to give you a computer
+
+-> memory, disk, network => hardware bridge => CPU(registers, control unit,ALU), caching
+
+-> memory is faster than disk
