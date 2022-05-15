@@ -38,4 +38,18 @@ Sandboxing:
   -> disallows process from getting out of that place
   -> no syscall filtering or other isolation
   
+   Pitfalls:
+   -> at variants cause issues
+   -> if you chroot again, it's bad.... why??
+   
+   -> a user with id of 0(process run as root or SUIDed to root) can break out of chroot unless the syscall is blocked
+   -> other missing forms of isolation
+        -> PID
+        -> network
+        -> IPC
+        
+   -> REPLACEMENTS OF chroot -> cgroup, namespace, seccomp
+   
+   
+   
    
