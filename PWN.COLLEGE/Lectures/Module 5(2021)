@@ -1,1 +1,41 @@
+V1
 
+-----------
+
+Sandboxing:
+
+-> 1950's = IC ran on metals
+-> 1960's = seperate system and process cdes
+-> 1980 = virtual memory / sandbox -> to avoid clobbering
+-> 1990's = scripting language and difference between interpreter and interpreted code
+
+-> 2000's = Browser Hacking
+    - link victim to malicious web-page
+    - trigger vulnerability
+    - wreak havoc over the victim machine
+    - drive by download -> popular traditional targets = Adobe Flash, ActiveX,Java applets
+    
+    Initial mitigations:
+    - eliminate traditional targets
+    -> didn't solve the problems
+    
+-> 2010 = rise of sandboxing
+    - untrusted code/data lives in a process with zero permissions
+    - spawn privileged parent process
+    - spawn sand-boxed child process
+    - when a child needs to perform a privileged action, it asks a parent
+    
+  -> Sandboxing is pretty effective
+      - strong mitigation
+        - we need one set of vulnerabilities to exploit sandboxed processes
+        - need another set of vulnerabilities to "break out" of the sand-box
+        
+  ---------------------------------------------------------------------------
+  
+  Chroot = change root
+  -> old part of OS FROM 1979
+  -> changes the meaning of "/"
+  -> disallows process from getting out of that place
+  -> no syscall filtering or other isolation
+  
+   
