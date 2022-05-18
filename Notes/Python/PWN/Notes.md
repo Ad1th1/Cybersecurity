@@ -2,23 +2,23 @@ pwntools is a CTF framework and exploit development library. Written in Python, 
 exploit writing as simple as possible.
 
 Compiling is used to make the computer understand human-readable code
--> objdump = gives us the assembly code
+> objdump = gives us the assembly code
 
--> when pc runs a program, and encounters a variable, it needs to store this in memory called stack
+> when pc runs a program, and encounters a variable, it needs to store this in memory called stack
 
--> stacks are lifo = last in-first out
--> push to stack and pop from stack
--> 2 registers(store a single value) for stack =
-    -> rsp(stack pointer) = points to the top of the stack
-    -> rbp(base pointer) = points to the base of the current stack frame = stack in relation to a function
-        -> every-time we enter a function, a new stack frame is created
-        -> variables are always at an offset from the base-pointer
-        
-   -> push -> rsp decreases
-   -> pop -> rsp increase
+> stacks are lifo = last in-first out
+> push to stack and pop from stack
+> 2 registers(store a single value) for stack =
+    > rsp(stack pointer) = points to the top of the stack
+        > push -> rsp decreases
+        > pop -> rsp increase
     
--> when we push something to the top of the stack, the stack pointer is decreased, stacks grow downwards
--> when we pop an item from the stack, the stack pointer is increased
+        > when we push something to the top of the stack, the stack pointer is decreased, stacks grow downwards
+        > when we pop an item from the stack, the stack pointer is increased
+
+    > rbp(base pointer) = points to the base of the current stack frame = stack in relation to a function
+        > every-time we enter a function, a new stack frame is created
+        > variables are always at an offset from the base-pointer
     
 -------------------------------------------------------------------------------------------
 
