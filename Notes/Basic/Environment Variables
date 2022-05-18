@@ -50,6 +50,26 @@ int main(int argc, char **argv, char **envp){
 
 -------------------------------------------------------------------------
 
+-> envt variable is specific to an environment
+-> values to be accessed on a program that can't be shared with others. This is set up in your environmnet variable
+
+-> env prints out environment variable
+-> HOME = 
+
+-> printenv to print out a variable name
+-> echo = echoes to the console
+-> $ is a shell syntax for refering to an environment variable
+
+-> The shell variables of a shell is only accessible from that shell process. The environment variables exported from that shell is accessible from both 
+that shell process and the sub-processes created from that shell.
+
+
+
+
+
+
+
+
 
 
 
