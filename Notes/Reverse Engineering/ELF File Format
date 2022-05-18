@@ -1,0 +1,11 @@
+-> standard binary format for Linux and Unix-like systems on x-86 processors
+-> associated with the following extensions -> none, .bin, .o, .so, .elf, .prx
+
+ELF Format
+
+ELF Header
+Program Header Table
+.Text
+...
+.Data
+Section Header Table
