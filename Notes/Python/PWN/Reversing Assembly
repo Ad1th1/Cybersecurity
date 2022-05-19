@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=nC1U1LJQL8o
+
 > split your code into three types
 
 What is ELF: 
@@ -6,6 +8,9 @@ What is ELF:
   > format for executables, shared libraries, object files, core dumps
   
   > segments = only relevant at run-time
+             = mapped to memory during execution
+             
+             
   > sections = only relevant at link-time
   
   > important segments
@@ -22,6 +27,7 @@ Address = 16/32 bit unsigned integer
           
       
   > elf header
+      To read elf header use readelf -h
       1. E_IDENT = 16 bytes -> defines how the elf file is going to be parsed
           = bytes 1-4 = 7f 45 4c 46 = elf file
           = byte 5 = class 0 -> none, 1 -> 32-bit objects, 2 -> 64-bit objects 
@@ -57,11 +63,22 @@ Address = 16/32 bit unsigned integer
           10. e_phentsize (HalfWord) = size per program header
           11. e_phnum (HalfWord) = number of program headers
           12. e_shentsize (HalfWord) = size per section header
-          13. e_shnum (Ha;f )
+          13. e_shnum (HalfWord) = number of section headers
+          14. e_shstrndx (HalfWord) = section header string table index
           
+    > segments
+        > each segment is defined by a small program-header structure
+        > specified by e_phoff ,e_phentsize, e_phnum, e_shentsize in elf header 
+        > Program header structure
+            1. Type (word)
       
-  
-  
-  
-  
-  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
