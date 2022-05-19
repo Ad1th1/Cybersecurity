@@ -1,1 +1,34 @@
--> split your code into three types
+> split your code into three types
+
+What is ELF: 
+  > Executable and Linkable format
+  > introduced bu UNIX and BSD
+  > format for executables, shared libraries, object files, core dumps
+  
+  > segments = only relevant at run-time
+  > sections = only relevant at link-time
+  
+  > important segments
+      > data segment -> contains variables and data
+      > code segment
+  
+  > in a dynamically linked library
+      > defines shared libraries to be loaded
+      > has it's own data and code segment
+      
+  > elf header
+      > E_IDENT = 16 bytes -> defines how the elf file is going to be parsed
+          = bytes 1-4 = 7f 45 4c 46 = elf file
+          = byte 5 = class 0 -> none, 1 -> 32-bit objects, 2 -> 64-bit objects 
+          = byte 6 = data 0 -> none, 1 -> LSB, 2 -> MSB 
+          = byte 7 = version = always 1
+          = byte 8 = OS ABI -> 0 = None, 1 = HP-UX, 2 = NetBSD, 3 = Linux
+          = byte 9 = ABI version = almost never used
+          = byte 10 -16 = padding
+          
+          
+  
+  
+  
+  
+  
