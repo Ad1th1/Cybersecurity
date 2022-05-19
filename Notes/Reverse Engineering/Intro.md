@@ -1,0 +1,2 @@
+-> hexedit using xxd
+-> use binary 
