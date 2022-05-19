@@ -16,8 +16,13 @@ What is ELF:
       > defines shared libraries to be loaded
       > has it's own data and code segment
       
+HalfWord = 16 bit unsigned integer
+Word = 32 bit unsigned integer
+Address = 16/32 bit unsigned integer
+          
+      
   > elf header
-      > E_IDENT = 16 bytes -> defines how the elf file is going to be parsed
+      1. E_IDENT = 16 bytes -> defines how the elf file is going to be parsed
           = bytes 1-4 = 7f 45 4c 46 = elf file
           = byte 5 = class 0 -> none, 1 -> 32-bit objects, 2 -> 64-bit objects 
           = byte 6 = data 0 -> none, 1 -> LSB, 2 -> MSB 
@@ -26,7 +31,35 @@ What is ELF:
           = byte 9 = ABI version = almost never used
           = byte 10 -16 = padding
           
+        2. e_type (halfword)
+          > ET_NONE 0 = no file type
+          > ET_REL 1 = relocatable file type = object file and used for relocation
+          > ET_EXEC 2 = executable file 
+          > ET_DYN 3 = shared object file = shared libraries and executables with PIE(position independent executables)
+          > ET_CORE 4 = core file = used for core-dumps
           
+         3. e_machine (halfword)
+           > 0x03 = x86
+           > 0x08 = MIPS
+           > 0X28 = ARM
+           > 0x3E = amd64
+           > 0XB7 = ARMv8
+           > 0xF3 = RISC-V
+          
+          4. e_version (word) = always 1
+          5. e_entry(address)  
+              = entry point address for executables
+              = constructor address for shared libraries
+                      
+          6. & 7. e_phoff and e_shoff(offsets) = program and section header offsets (relative to the beginning of the file)
+          8. e_flags (Word)
+          9. e_ehsize (HalfWord) = size of elf header
+          10. e_phentsize (HalfWord) = size per program header
+          11. e_phnum (HalfWord) = number of program headers
+          12. e_shentsize (HalfWord) = size per section header
+          13. e_shnum (Ha;f )
+          
+      
   
   
   
