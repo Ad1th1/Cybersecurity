@@ -9,3 +9,60 @@ Filtering: Wireshark is capable of slicing and dicing all of this random live da
 the information you need to see.
 Visualization: Wireshark, like any good packet sniffer, allows you to dive right into the very middle of a network packet. It also allows
 you to visualize entire conversations and network streams.
+
+---------------------------------------------------------------
+
+Wire Tapping:
+Network taps are a physical implant in which you physically tap between a cable, these techniques are commonly used by Threat Hunting/DFIR teams and red teams in an engagement to sniff and capture packets.
+
+Hardware tapping = vampire tap
+Inline network tap = replicates packets
+
+Mac flooding 
+= tactic used by red team to sniff packets
+= stresses the switch and fills the CAM table
+= switch no longer accepts new MAC addresses and sends out packets to all ports to keep network alive
+
+ARP Poisoning
+= redirect traffic from host to machine
+
+------------------------------------------------------
+
+-> display filters
+
+Basic oprators
+and - operator: and / &&
+or - operator: or / ||
+equals - operator: eq / ==
+not equal - operator: ne / !=
+greater than - operator: gt /  >
+less than - operator: lt / <
+
+Filtering by IP : ip.addr == <IP Address>
+ip.src == <SRC IP Address> and ip.dst == <DST IP Address> 
+
+Filtering by TCP :
+tcp.port eq <Port #> or <Protocol Name>
+
+Filtering by UDP :
+udp.port eq <Port #> or <Protocol Name>
+
+Application: end user layer
+           : HTTP, FTP, IRC, SSH, DNS
+Presentation: syntax layer
+            : SSL, SSH, IMAP, FTP, MPEG, JPEG
+Session: synchronization and send to port
+       : API's, Sockets, WinSock
+Transport: End-to-end connections
+         : TCP,UDP
+Network: Packets
+         IP, ICMP,IPSec, IGMP
+Data-link: Frames
+         : Ethernet, PPP, Switch, Bridge
+Physical: physical Structure
+        : coax, fiber, wireless, hubs, repeaters
+        
+
+
+
+
