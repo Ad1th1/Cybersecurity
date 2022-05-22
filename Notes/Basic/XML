@@ -1,0 +1,15 @@
+
+- Extensible Mark-up(uses tags that are not pre-defined) Language
+- structured, formatted and syntaxed way of communication between applications
+- used to store and transport data
+- platform independent
+- W3C reccomendation
+- <start_tag>....<end_tag>
+- human and machine readable
+- 
+
+- XML formatters are either online tools or applications available for download. You can upload your XML files and beautify them, 
+meaning that the tool will automatically add indentations based on the logic and structure of your document.
+- tree view on XML formatters
+
+- An XML Schema describes the structure of an XML document - DTD(document type definition) and XSD(XML Schema Definition)
