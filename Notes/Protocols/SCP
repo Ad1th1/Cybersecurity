@@ -1,0 +1,9 @@
+Secure Copy Protocol
+
+ssh(secure shell protocol -> more secure) and telnet = remote control protocols
+
+ftp -> not super secure
+
+ssh uses scp to transfer protocol
+
+PuTTY = a free and open-source terminal emulator, serial console and network file transfer application. It supports several network protocols, including SCP, SSH, Telnet, rlogin, and raw socket connection.
