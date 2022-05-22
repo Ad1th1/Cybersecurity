@@ -1,0 +1,5 @@
+We can also use some special characters or regular expressions.
+
+^ - search at the beginning of the line.
+$ - search at the end of the line.
+. - Search any character.
