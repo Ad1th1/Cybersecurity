@@ -1,0 +1,1 @@
+- classified into hardware and software or personal and commercial
