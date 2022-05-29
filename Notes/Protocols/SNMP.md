@@ -1,0 +1,12 @@
+- simple network management protocol
+- used to allow administrators to  monitor networking equipment states and modify settings and configurations on equipment
+- used on other devices like switches, hubs, routers, 
+- OID = Object Identifier = unique number for each device (kinda like ip)
+- MIB = management information base = text file to translate numerical oid to word based oid (kinda like dns)
+- can be used to ask uptime 
+- polling = network monitor connects to device on port 161
+- notifying = device sends OID related message to monitor system port 162
+- messages are called traps, notifications or informs
+- 3 versions -> 1,2c,3 
+- version 3 is most secure = username + password = encrypted
+- 
