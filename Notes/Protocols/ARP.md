@@ -1,0 +1,4 @@
+- address resolution protocol
+- resolve IP addresses to MAC addresses
+- MAC address -> physical address of device
+- 
