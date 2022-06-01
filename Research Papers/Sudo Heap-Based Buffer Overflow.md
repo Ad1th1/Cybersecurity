@@ -34,9 +34,20 @@
   - the researchers tried finding another command that can completely bypass this parse_args function
   - modes were checked -> this part is still a little fuzzy to me -> haven't really inderstood which mode
   - best mode is sudoedit -s
-  - 
-
   
+  
+  Exploits:
+    - exploitations seem low
+    - figure out a way to overflow a service_user structure
+    - we have a buffer on the heap that can be overflown
+    - to exploit this, we need to be able to control what comes after the buffer
+    - during execution, different sized objects are allocated and freed on the heap, leaving the heap fragmented
+    - malloc places arguments into different holes
+    - grooming the heap to have stuff where you want it to be to exploit easily = heap feng-shui
+    - write a script, randomize lc environment variables and buffer size
+    - check where sudo crashes using gdb
+    - lots of nss functions
+    - this is the only seemingly viable exploitation
   
   
   
@@ -57,8 +68,19 @@ perfoming some kind of transformation on the data.
 - sgid = set group id = allows groups to run the command as root
 - sticky bit
 
+- ASLR: Address space layout randomization
+       - memory-protection process for OS'es to guard against buffer-overflow attacks by randomizing the location where system-executables are loaded into memory\
+       - created as a Linux patch
+       - can be defeated in 2 ways
+         - leak addresses
+         - calculate offsets
 
-
+- Name Service Switch: 
+    - important file for operating system 
+    - helps your system know where to find info about different services
+    -  ldap = used for user authentication
+    -   yet to explore, not completely understood
+    -   
 
 
 
