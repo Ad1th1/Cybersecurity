@@ -1,0 +1,2 @@
+- To ensure that you can access a file from anywhere in the system, use this command 
+  Eg: sudo cp ffuf /usr/local/bin/ 
