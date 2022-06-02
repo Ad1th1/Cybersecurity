@@ -1,8 +1,8 @@
 **Files**
-> Dirbuster
+> - Dirbuster
 
 Network Sniffing
-> Wireshark
+> - Wireshark
 
 **Images**
 > - file, cat, strings, grep, ihdr, hexedit(for png)
