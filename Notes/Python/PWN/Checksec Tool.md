@@ -1,0 +1,5 @@
+- RELRO = Relocation Read Only
+- Stack Canaries = to check for stack overflow
+- NX = Not executable
+- PIE = Position Independent Executable
+- 
