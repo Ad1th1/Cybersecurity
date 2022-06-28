@@ -1,3 +1,15 @@
+**OSINT**
+> - robots.txt
+> - favicon / framework stack
+> - sitemap.xml
+> - http headers ( curl http://10.10.49.172 -v)
+> - google dorking
+> - Wappalyzer = online tool and browser extension = technologies a website uses, frameworks, Content Management Systems (CMS), payment processors and and version numbers
+> - The Wayback Machine (https://archive.org/web/) = historical archive of websites. This service can help uncover old pages that may still be active on the current website.
+> - github and git
+> - S3 Buckets are a storage service provided by Amazon AWS, allowing people to save files and even static website content in the cloud accessible over HTTP and HTTPS. The owner of the files can set access permissions to either make files public, private and even writable. 
+>  
+
 **Files**
 > - Dirbuster
 
